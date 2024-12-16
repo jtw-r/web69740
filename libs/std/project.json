@@ -1,0 +1,19 @@
+{
+  "name": "std",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/std/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/std",
+        "main": "libs/std/src/index.ts",
+        "tsConfig": "libs/std/tsconfig.lib.json",
+        "assets": ["libs/std/*.md"]
+      }
+    }
+  }
+}
